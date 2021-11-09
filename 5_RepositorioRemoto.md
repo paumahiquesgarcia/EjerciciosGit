@@ -37,6 +37,7 @@ git clone url
 gedit autores.txt
 git add .
 git commit -m "Añadido autor"
+git push origin master
 ~~~
 
 ## Ejercicio 4
