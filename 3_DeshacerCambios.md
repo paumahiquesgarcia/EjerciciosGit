@@ -9,8 +9,12 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 3. Deshacer los cambios realizados en el fichero **indice.txt** para volver a la versión anterior del fichero.
 4. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+cd "directorio donde este indice.txt"
+gedit indice.txt
+git status
+git checkout indice.txt
+git status
 ~~~
 
 ## Ejercicio 2
@@ -23,8 +27,15 @@ solución
 6. Deshacer los cambios realizados en el fichero **indice.txt** para volver a la versión anterior del fichero.
 7. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+cd "directorio donde este indice.txt"
+gedit indice.txt
+git add .
+git status
+git reset
+git status
+git checkout .
+git status
 ~~~
 
 ## Ejercicio 3
@@ -39,8 +50,18 @@ solución
 8. Deshacer los cambios realizados para volver a la versión del repositorio.
 9. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+cd "directorio donde este indice.txt"
+gedit indice.txt
+git clean -n capitulos/capitulo3.txt
+git clean -f capitulos/capitulo3.txt (git clean es parecido a reset y checkout, solo que en vez de deshacer cambios en la zona temporal, git clean actua en el directorio de trabajo, la opcion -n te dice que vas a borrar y con -f lo borras)
+touch capitulos/capitulo4.txt
+git add .
+git status
+git reset
+git status
+git checkout .
+git status
 ~~~
 
 ## Ejercicio 4
@@ -55,6 +76,21 @@ solución
 8. Deshacer el último commit y los cambios anteriores del directorio de trabajo volviendo a la versión anterior del repositorio.
 9. Comprobar de nuevo el historial y el estado del repositorio.
 
-~~~git
-solución
+~~~
+gedit indice.txt
+git clean -n capitulos/capitulo3.txt
+git clean -f capitulos/capitulo3.txt
+git add .
+git commit -m "“Borrado accidental."
+git log
+git log --oneline
+copiamos el hash del commit anterior a "Borrado accidental."
+git reset "Aqui ponemos el hash que acabamos de copiar, pero sin las comillas"
+git log --oneline
+git status
+git add .
+git commit -m "Borrado accidental."
+git reset --hard
+git log --oneline
+git status
 ~~~

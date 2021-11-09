@@ -16,7 +16,13 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios de cre
 6. Volver a mostrar el historial de cambios del repositorio.
 
 ~~~
-solución
+git log
+mkdir capitulos
+cd capitulos
+gedit capitulo1.txt
+git add .
+git commit -m "Añadido capitulo 1."
+git log
 ~~~
 
 ## Ejercicio 2
@@ -30,7 +36,11 @@ solución
 3. Mostrar las diferencias entre la última versión y dos versiones anteriores.
 
 ~~~
-solución
+gedit capitulo2.txt
+git add capitulo2.txt
+git commit -m "Añadido capítulo 2."
+git diff HEAD~2 (Como no se exactamente a que se refiere la pregunta te pongo dos opciones, con este te mostrar el ultimo commit y el antepenultimo, HEAD es el ultimo repositorio)
+git log -p -2 (Este te mostrara los 3 ultimos commits))
 ~~~
 
 ## Ejercicio 3
@@ -44,7 +54,11 @@ solución
 4. Mostrar las diferencias entre la primera y la última versión del repositorio.
 
 ~~~
-solución
+gedit capitulo3.txt
+git add capitulo3.txt
+git commit -m "Añadido capitulo 3"
+git log indice.txt (Usamos este comando para copiar el ID del primer repositorio)
+git diff "ID del primer repositorio"..HEAD (..HEAD te mostrara todos los repositorios hasta HEAD)
 ~~~
 
 ## Ejercicio 4
@@ -58,5 +72,9 @@ solución
 4. Mostrar quién ha hecho cambios sobre el fichero indice.txt.
 
 ~~~
-solución
+cd ..
+gedit indice.txt
+git add indice.txt
+git commit -m "Añadido capitulo 5 al indice."
+git log --pretty=format:%an indice.txt
 ~~~

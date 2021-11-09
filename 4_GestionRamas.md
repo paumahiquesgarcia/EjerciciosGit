@@ -6,7 +6,9 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 
 Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 
-~~~git
+~~~
+git branch bibliografia
+git branch -av
 ~~~
 
 ## Ejercicio 2
@@ -19,7 +21,11 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 3. Hacer un commit con el mensaje “Añadido capítulo 4.”
 4. Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+gedit capitulos/capitulo4.txt
+git add .
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 3
@@ -33,7 +39,12 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 4. Hacer un commit con el mensaje “Añadida primera referencia bibliográfica.”
 5. Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+git checkout bibliografia
+gedit bibliografia.txt
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 4
@@ -43,7 +54,12 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 3. Eliminar la rama **bibliografia**.
 4. Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+gedit checkout master
+gedit merge bibliografia
+git log --graph --all --oneline
+git branch -d bibliografia
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 5
@@ -72,5 +88,19 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 10.  Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía.”
 11.  Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+gedit branch bibliografia
+git checkout bibliografia
+geddit bibliografia.txt
+git add .
+git commit -m "Añadida nueva referencia bibliográfica."
+git checkout master
+geddit bibliografia.txt
+git add .
+git commit -m "Añadida nueva referencia bibliográfica."
+git merge bibliografia
+geddit bibliografia.txt
+git add .
+git commit -m "Resuelto conflicto de bibliografia."
+git log --graph --all --oneline
 ~~~

@@ -8,8 +8,9 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 2. Añadirlo al repositorio local del libro.
 3. Mostrar todos los repositorios remotos configurados.
 
-~~~git
-solución
+~~~
+git remote add libro-git url
+git remote -v
 ~~~
 
 
@@ -18,8 +19,8 @@ solución
 1. Añadir los cambios del repositorio local al repositorio remoto de GitHub.
 2. Acceder a GitHub y comprobar que se han subido los cambios mostrando el historial de versiones.
 
-~~~git
-solución
+~~~
+git push libro-git master
 ~~~
 
 ## Ejercicio 3
@@ -31,8 +32,11 @@ solución
 5. Hacer un commit con el mensaje “Añadido autor.”
 6. Subir los cambios al repositorio remoto.
 
-~~~git
-solución
+~~~
+git clone url
+gedit autores.txt
+git add .
+git commit -m "Añadido autor"
 ~~~
 
 ## Ejercicio 4
@@ -43,8 +47,10 @@ solución
 
 Nota: En este ejercicio, deberéis enviar capturas de los pasos que vayáis llevando a cabo.
 
-~~~git
-solución
+~~~
+git clone url
+gedit REDMI.md
+git push origin main
 ~~~
 
 ## Ejercicio 5
@@ -53,6 +59,6 @@ solución
 2. Crea un repositorio en tu cuenta de GitHub, y sube el repositorio clonado con las soluciones de los diferentes ejercicios.
 3. Modifica el fichero README.md, indicando tu nombre e indica la dirección del repositorio.
 
-~~~git
-solución
+~~~
+git clone url
 ~~~
