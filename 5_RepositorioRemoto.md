@@ -61,4 +61,9 @@ git push origin main
 
 ~~~
 git clone url
+gedit "todos los ejercicios"
+git add .
+git commit -m "EjerciciosGit"
+git remote add EjerciciosGit url
+git push EjerciciosGit master
 ~~~
